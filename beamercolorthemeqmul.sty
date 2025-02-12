@@ -3,6 +3,9 @@
 %  Color Settings
 %--------------------------------------
 
+
+
+
 % define custom colors
 \definecolor{qmblue}{HTML}{21376A}
 \definecolor{qmwhite}{HTML}{FFFFFF}
@@ -27,9 +30,34 @@
 \setbeamercolor{block body example}{fg=qmblack,bg=qmwhite}
 \setbeamercolor{block title alerted}{fg=qmwhite,bg=qmred}
 \setbeamercolor{block body alerted}{fg=qmblack,bg=qmwhite}
+\setbeamercolor{block title corollary}{fg=qmred,bg=qmred}
+\setbeamercolor{block body corollary}{fg=qmred,bg=qmred}
+\setbeamercolor{block title proof}{fg=qmred,bg=qmred}
+\setbeamercolor{block body proof}{fg=qmred,bg=qmred}
 
 
-\setbeamercolor{title defined}{fg=qmwhite,bg=qmgreen}
-\setbeamercolor{body definition}{fg=qmwhite,bg=qmgreen}
+
 
 \setbeamercolor{structure}{fg=qmblue}
+
+\setbeamertemplate{block corollary}
+{
+  \begin{beamercolorbox}[sep=0.3cm]{block title corollary}
+    \usebeamerfont{block title}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=0.5cm]{block body corollary}
+    \usebeamerfont{block body}\insertblockbody
+  \end{beamercolorbox}
+}
+
+
+\setbeamertemplate{block proof}
+{
+  \begin{beamercolorbox}[sep=0.3cm]{block title proof}
+    \usebeamerfont{block title}\insertblocktitle
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[sep=0.5cm]{block body proof}
+    \usebeamerfont{block body}\insertblockbody
+  \end{beamercolorbox}
+}
+
